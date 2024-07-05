@@ -20,7 +20,10 @@ import {
   screen,
   locale,
   location,
-  enable_batching
+  message_id,
+  enable_batching,
+  consent,
+  validateConsentObject
 } from '../segment-properties'
 import { MissingUserOrAnonymousIdThrowableError } from '../errors'
 
@@ -47,7 +50,9 @@ const action: ActionDefinition<Settings, Payload> = {
     timezone,
     group_id,
     properties,
-    enable_batching
+    message_id,
+    enable_batching,
+    consent
   },
   perform: (_request, { payload, statsContext }) => {
     if (!payload.anonymous_id && !payload.user_id) {
@@ -73,14 +78,18 @@ const action: ActionDefinition<Settings, Payload> = {
 }
 
 function convertPayload(data: Payload) {
+  const isValidConsentObject = validateConsentObject(data?.consent)
+
   return {
     userId: data?.user_id,
     anonymousId: data?.anonymous_id,
     timestamp: data?.timestamp,
     name: data?.screen_name,
+    messageId: data?.message_id,
     context: {
       app: data?.application,
       campaign: data?.campaign_parameters,
+      consent: isValidConsentObject ? { ...data?.consent } : {},
       device: data?.device,
       ip: data?.ip_address,
       locale: data?.locale,

@@ -6,10 +6,19 @@ Object {
     "batch": Array [
       Object {
         "anonymousId": "tKaa(2A",
+        "context": Object {
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
+        },
         "groupId": "tKaa(2A",
         "integrations": Object {
           "All": false,
         },
+        "messageId": "tKaa(2A",
         "timestamp": "2021-02-01T00:00:00.000Z",
         "traits": Object {
           "testType": "tKaa(2A",
@@ -29,10 +38,19 @@ Object {
     "batch": Array [
       Object {
         "anonymousId": "tKaa(2A",
+        "context": Object {
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
+        },
         "groupId": "tKaa(2A",
         "integrations": Object {
           "All": false,
         },
+        "messageId": "tKaa(2A",
         "timestamp": undefined,
         "traits": Object {},
         "type": "group",

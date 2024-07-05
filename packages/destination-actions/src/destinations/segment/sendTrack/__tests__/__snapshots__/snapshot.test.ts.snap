@@ -20,6 +20,12 @@ Object {
             "source": "ET^Xg5cIGF]2ok",
             "term": "ET^Xg5cIGF]2ok",
           },
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
           "device": Object {
             "adTracking_Enabled": false,
             "advertising_id": "ET^Xg5cIGF]2ok",
@@ -69,6 +75,7 @@ Object {
           "userAgent": "ET^Xg5cIGF]2ok",
         },
         "event": "ET^Xg5cIGF]2ok",
+        "messageId": "ET^Xg5cIGF]2ok",
         "properties": Object {
           "testType": "ET^Xg5cIGF]2ok",
         },
@@ -91,6 +98,12 @@ Object {
         "context": Object {
           "app": undefined,
           "campaign": undefined,
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
           "device": undefined,
           "groupId": "ET^Xg5cIGF]2ok",
           "ip": undefined,
@@ -105,6 +118,7 @@ Object {
           "userAgent": undefined,
         },
         "event": "ET^Xg5cIGF]2ok",
+        "messageId": "ET^Xg5cIGF]2ok",
         "properties": Object {},
         "timestamp": undefined,
         "type": "track",

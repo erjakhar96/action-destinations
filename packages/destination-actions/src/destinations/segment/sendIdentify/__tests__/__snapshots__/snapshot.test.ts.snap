@@ -20,6 +20,12 @@ Object {
             "source": "l1ibvt$6IJOK*&*ZgReE",
             "term": "l1ibvt$6IJOK*&*ZgReE",
           },
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
           "device": Object {
             "adTracking_Enabled": false,
             "advertising_id": "l1ibvt$6IJOK*&*ZgReE",
@@ -65,6 +71,7 @@ Object {
           "timezone": "l1ibvt$6IJOK*&*ZgReE",
           "userAgent": "l1ibvt$6IJOK*&*ZgReE",
         },
+        "messageId": "l1ibvt$6IJOK*&*ZgReE",
         "timestamp": "l1ibvt$6IJOK*&*ZgReE",
         "traits": Object {
           "testType": "l1ibvt$6IJOK*&*ZgReE",
@@ -87,6 +94,12 @@ Object {
         "context": Object {
           "app": undefined,
           "campaign": undefined,
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
           "device": undefined,
           "groupId": "l1ibvt$6IJOK*&*ZgReE",
           "ip": undefined,
@@ -99,6 +112,7 @@ Object {
           "timezone": undefined,
           "userAgent": undefined,
         },
+        "messageId": "l1ibvt$6IJOK*&*ZgReE",
         "timestamp": undefined,
         "traits": Object {},
         "type": "identify",

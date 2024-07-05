@@ -20,6 +20,12 @@ Object {
             "source": "!jvXo22kjE9u2QlY4S",
             "term": "!jvXo22kjE9u2QlY4S",
           },
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
           "device": Object {
             "adTracking_Enabled": false,
             "advertising_id": "!jvXo22kjE9u2QlY4S",
@@ -65,6 +71,7 @@ Object {
           "timezone": "!jvXo22kjE9u2QlY4S",
           "userAgent": "!jvXo22kjE9u2QlY4S",
         },
+        "messageId": "!jvXo22kjE9u2QlY4S",
         "name": "!jvXo22kjE9u2QlY4S",
         "properties": Object {
           "category": "!jvXo22kjE9u2QlY4S",
@@ -95,6 +102,12 @@ Object {
         "context": Object {
           "app": undefined,
           "campaign": undefined,
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
           "device": undefined,
           "groupId": "!jvXo22kjE9u2QlY4S",
           "ip": undefined,
@@ -107,6 +120,7 @@ Object {
           "timezone": undefined,
           "userAgent": undefined,
         },
+        "messageId": "!jvXo22kjE9u2QlY4S",
         "name": undefined,
         "properties": Object {
           "category": undefined,

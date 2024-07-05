@@ -1,7 +1,18 @@
 import type { ActionDefinition } from '@segment/actions-core'
 import type { Settings } from '../generated-types'
 import type { Payload } from './generated-types'
-import { user_id, anonymous_id, timestamp, event_name, group_id, properties, engage_space } from '../segment-properties'
+import {
+  user_id,
+  anonymous_id,
+  timestamp,
+  event_name,
+  group_id,
+  properties,
+  engage_space,
+  message_id,
+  consent,
+  validateConsentObject
+} from '../segment-properties'
 import { MissingUserOrAnonymousIdThrowableError } from '../errors'
 
 const action: ActionDefinition<Settings, Payload> = {
@@ -14,12 +25,17 @@ const action: ActionDefinition<Settings, Payload> = {
     timestamp,
     event_name,
     group_id,
-    properties
+    properties,
+    message_id,
+    consent
   },
   perform: (_, { payload, statsContext }) => {
     if (!payload.anonymous_id && !payload.user_id) {
       throw MissingUserOrAnonymousIdThrowableError
     }
+
+    const isValidConsentObject = validateConsentObject(payload?.consent)
+
     statsContext?.statsClient?.incr('tapi_internal', 1, [...statsContext.tags, `action:sendTrack`])
 
     return {
@@ -29,6 +45,7 @@ const action: ActionDefinition<Settings, Payload> = {
           anonymousId: payload?.anonymous_id,
           timestamp: payload?.timestamp,
           event: payload?.event_name,
+          messageId: payload?.message_id,
           integrations: {
             // Setting 'integrations.All' to false will ensure that we don't send events
             // to any destinations which is connected to the Segment Profiles space.
@@ -36,6 +53,9 @@ const action: ActionDefinition<Settings, Payload> = {
           },
           properties: {
             ...payload?.properties
+          },
+          context: {
+            consent: isValidConsentObject ? { ...payload?.consent } : {}
           },
           type: 'track'
         }

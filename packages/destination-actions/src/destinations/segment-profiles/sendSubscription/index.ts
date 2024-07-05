@@ -15,7 +15,9 @@ import {
   android_push_token,
   android_push_subscription_status,
   ios_push_subscription_status,
-  ios_push_token
+  ios_push_token,
+  message_id,
+  consent
 } from './subscription-properties'
 import {
   InvalidSubscriptionStatusError,
@@ -27,7 +29,7 @@ import {
   MissingIosPushTokenIfIosPushSubscriptionIsPresentError,
   MissingPhoneIfSmsOrWhatsappSubscriptionIsPresentError
 } from '../errors'
-import { timestamp } from '../segment-properties'
+import { timestamp, validateConsentObject } from '../segment-properties'
 import { StatsClient } from '@segment/actions-core/destination-kit'
 
 interface SubscriptionStatusConfig {
@@ -278,7 +280,9 @@ const action: ActionDefinition<Settings, Payload> = {
     ios_push_token,
     ios_push_subscription_status,
     traits,
-    timestamp
+    timestamp,
+    message_id,
+    consent
   },
   perform: (_request, { payload, statsContext }) => {
     const statsClient = statsContext?.statsClient
@@ -287,6 +291,8 @@ const action: ActionDefinition<Settings, Payload> = {
 
     // Before sending subscription data to Segment, a series of validations are done.
     validateSubscriptions(payload, statsClient, tags)
+    const isValidConsentObject = validateConsentObject(payload?.consent)
+
     // Enriches ExternalId's
     const externalIds: ExtenalId[] = enrichExternalIds(payload, [])
     // Enrich Messaging Subscriptions
@@ -300,7 +306,8 @@ const action: ActionDefinition<Settings, Payload> = {
       context: {
         messaging_subscriptions: messagingSubscriptions,
         externalIds,
-        messaging_subscriptions_retl: true
+        messaging_subscriptions_retl: true,
+        consent: isValidConsentObject ? { ...payload?.consent } : {}
       },
       timestamp: payload?.timestamp,
       integrations: {
@@ -308,6 +315,7 @@ const action: ActionDefinition<Settings, Payload> = {
         // to any destinations which is connected to the Segment Profiles space
         All: false
       },
+      messageId: payload?.message_id,
       type: 'identify'
     }
 

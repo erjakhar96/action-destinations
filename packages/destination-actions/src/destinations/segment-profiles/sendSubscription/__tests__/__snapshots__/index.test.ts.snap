@@ -6,6 +6,7 @@ Object {
     Object {
       "anonymousId": "anonId1234",
       "context": Object {
+        "consent": Object {},
         "externalIds": Array [
           Object {
             "collection": "users",
@@ -64,6 +65,7 @@ Object {
       "integrations": Object {
         "All": false,
       },
+      "messageId": undefined,
       "timestamp": "2023-10-10T07:24:07.036Z",
       "traits": Object {
         "email": "test-user@test-company.com",
@@ -82,6 +84,7 @@ Object {
     Object {
       "anonymousId": "anonId1234",
       "context": Object {
+        "consent": Object {},
         "externalIds": Array [
           Object {
             "collection": "users",
@@ -113,6 +116,7 @@ Object {
       "integrations": Object {
         "All": false,
       },
+      "messageId": undefined,
       "timestamp": "2023-10-10T07:24:07.036Z",
       "traits": Object {
         "email": "test-user@test-company.com",

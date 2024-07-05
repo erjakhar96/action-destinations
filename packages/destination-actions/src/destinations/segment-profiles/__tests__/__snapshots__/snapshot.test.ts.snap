@@ -6,10 +6,19 @@ Object {
     "batch": Array [
       Object {
         "anonymousId": "cZE8HyAL0!BF#)WQb^",
+        "context": Object {
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
+        },
         "groupId": "cZE8HyAL0!BF#)WQb^",
         "integrations": Object {
           "All": false,
         },
+        "messageId": "cZE8HyAL0!BF#)WQb^",
         "timestamp": "2021-02-01T00:00:00.000Z",
         "traits": Object {
           "testType": "cZE8HyAL0!BF#)WQb^",
@@ -29,10 +38,19 @@ Object {
     "batch": Array [
       Object {
         "anonymousId": "cZE8HyAL0!BF#)WQb^",
+        "context": Object {
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
+        },
         "groupId": "cZE8HyAL0!BF#)WQb^",
         "integrations": Object {
           "All": false,
         },
+        "messageId": "cZE8HyAL0!BF#)WQb^",
         "timestamp": undefined,
         "traits": Object {},
         "type": "group",
@@ -50,10 +68,19 @@ Object {
     "batch": Array [
       Object {
         "anonymousId": "hIC1OAmWa[Q!&d%o",
+        "context": Object {
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
+        },
         "groupId": "hIC1OAmWa[Q!&d%o",
         "integrations": Object {
           "All": false,
         },
+        "messageId": "hIC1OAmWa[Q!&d%o",
         "timestamp": "2021-02-01T00:00:00.000Z",
         "traits": Object {
           "testType": "hIC1OAmWa[Q!&d%o",
@@ -73,10 +100,19 @@ Object {
     "batch": Array [
       Object {
         "anonymousId": "hIC1OAmWa[Q!&d%o",
+        "context": Object {
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
+        },
         "groupId": "hIC1OAmWa[Q!&d%o",
         "integrations": Object {
           "All": false,
         },
+        "messageId": "hIC1OAmWa[Q!&d%o",
         "timestamp": undefined,
         "traits": Object {},
         "type": "identify",
@@ -95,6 +131,7 @@ Object {
       Object {
         "anonymousId": undefined,
         "context": Object {
+          "consent": Object {},
           "externalIds": Array [
             Object {
               "collection": "users",
@@ -126,6 +163,7 @@ Object {
         "integrations": Object {
           "All": false,
         },
+        "messageId": undefined,
         "timestamp": undefined,
         "traits": Object {},
         "type": "identify",
@@ -144,6 +182,7 @@ Object {
       Object {
         "anonymousId": undefined,
         "context": Object {
+          "consent": Object {},
           "externalIds": Array [
             Object {
               "collection": "users",
@@ -175,6 +214,7 @@ Object {
         "integrations": Object {
           "All": false,
         },
+        "messageId": undefined,
         "timestamp": undefined,
         "traits": Object {},
         "type": "identify",
@@ -192,10 +232,19 @@ Object {
     "batch": Array [
       Object {
         "anonymousId": "[2uovRzxThJj",
+        "context": Object {
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
+        },
         "event": "[2uovRzxThJj",
         "integrations": Object {
           "All": false,
         },
+        "messageId": "[2uovRzxThJj",
         "properties": Object {
           "testType": "[2uovRzxThJj",
         },
@@ -215,10 +264,19 @@ Object {
     "batch": Array [
       Object {
         "anonymousId": "[2uovRzxThJj",
+        "context": Object {
+          "consent": Object {
+            "categoryPreferences": Object {
+              "analytics": true,
+              "marketing": false,
+            },
+          },
+        },
         "event": "[2uovRzxThJj",
         "integrations": Object {
           "All": false,
         },
+        "messageId": "[2uovRzxThJj",
         "properties": Object {},
         "timestamp": undefined,
         "type": "track",
